@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Digi Romania",
+        "description": "Enter your My Digi credentials (the e-mail or client ID and password you use at digi.ro). You'll then confirm a 2-step verification code.",
+        "data": {
+          "email": "E-mail or client ID",
+          "password": "Password"
+        }
+      },
+      "twofa": {
+        "title": "Digi — verification method",
+        "description": "Choose how to receive your verification code.",
+        "data": {
+          "choice": "Method"
+        }
+      },
+      "code": {
+        "title": "Digi — verification code",
+        "description": "Enter the code Digi just sent you.",
+        "data": {
+          "code": "Verification code"
+        }
+      },
+      "address": {
+        "title": "Digi — choose address",
+        "description": "Your account has more than one address. Choose which one to set up.",
+        "data": {
+          "address": "Address"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Wrong e-mail/client ID or password.",
+      "cannot_connect": "Could not reach digi.ro. Check your connection and try again.",
+      "twofa_parse": "Could not read the 2-step verification page. Try again.",
+      "twofa_send": "Could not send the verification code. Try again.",
+      "twofa_invalid": "That verification code was not accepted."
+    },
+    "abort": {
+      "already_configured": "This Digi account is already configured.",
+      "reauth_successful": "Re-authentication was successful.",
+      "cannot_connect": "Logged in, but could not load your invoices."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "last_invoice_amount": { "name": "Last invoice amount" },
+      "last_invoice_date": { "name": "Last invoice date" },
+      "last_invoice_due_date": { "name": "Last invoice due date" },
+      "unpaid_total": { "name": "Unpaid total" },
+      "unpaid_count": { "name": "Unpaid invoices" }
+    }
+  }
+}
