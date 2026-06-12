@@ -1,14 +1,6 @@
 Digi Romania — Home Assistant integration
 Copyright (c) 2026 PanTeraS
 
-This integration's Digi login (email/password + SMS/email 2FA), address
-selection, and invoice-page HTML parsing are adapted from:
-
-  utilitati_romania — https://github.com/HAForgeLabs/utilitati_romania
-  Licensed under the MIT License.
-  Copyright (c) 2026 Marius Onițiu
-  Portions Copyright (c) 2024, 2026 Cristian Necrea
-
 MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

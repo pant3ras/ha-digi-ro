@@ -61,8 +61,4 @@ Then: **Settings → Devices & Services → Add Integration → Digi Romania**.
 
 Brought to you by **PanTeraS**.
 
-The login (e-mail/password + 2FA), address selection, and invoice parsing are adapted
-from [HAForgeLabs/utilitati_romania](https://github.com/HAForgeLabs/utilitati_romania)
-(MIT) — see [`NOTICE`](NOTICE).
-
 If you find this useful, you can [buy me a coffee ☕](https://www.buymeacoffee.com/panteras).
