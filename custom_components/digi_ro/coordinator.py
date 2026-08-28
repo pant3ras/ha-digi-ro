@@ -19,9 +19,16 @@ _LOGGER = logging.getLogger(__name__)
 class DigiDataCoordinator(DataUpdateCoordinator[DigiData]):
     """Polls Digi My Account invoices on a schedule."""
 
+    config_entry: ConfigEntry
+
     def __init__(self, hass: HomeAssistant, entry: ConfigEntry, client: DigiApiClient) -> None:
-        super().__init__(hass, _LOGGER, name=DOMAIN, update_interval=DEFAULT_SCAN_INTERVAL)
-        self.entry = entry
+        super().__init__(
+            hass,
+            _LOGGER,
+            config_entry=entry,
+            name=DOMAIN,
+            update_interval=DEFAULT_SCAN_INTERVAL,
+        )
         self.client = client
         self._history_limit = entry.data.get(CONF_HISTORY_LIMIT, DEFAULT_HISTORY_LIMIT)
         # Resume the persisted session so a restart doesn't force a re-login.
@@ -42,7 +49,8 @@ class DigiDataCoordinator(DataUpdateCoordinator[DigiData]):
     def _persist_cookies(self) -> None:
         """Save the rotated cookie jar so the session survives restarts."""
         cookies = self.client.export_cookies()
-        if cookies and cookies != self.entry.data.get(CONF_COOKIES):
+        if cookies and cookies != self.config_entry.data.get(CONF_COOKIES):
             self.hass.config_entries.async_update_entry(
-                self.entry, data={**self.entry.data, CONF_COOKIES: cookies}
+                self.config_entry,
+                data={**self.config_entry.data, CONF_COOKIES: cookies},
             )
