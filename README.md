@@ -1,4 +1,4 @@
-![Digi Romania](https://raw.githubusercontent.com/pant3ras/ha-digi-ro/main/logo.png)
+![Digi Romania](https://raw.githubusercontent.com/pant3ras/ha-digi-ro/master/custom_components/digi_ro/brand/logo.png)
 
 # Digi Romania for Home Assistant
 

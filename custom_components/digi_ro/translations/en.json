@@ -41,6 +41,7 @@
     "abort": {
       "already_configured": "This Digi account is already configured.",
       "reauth_successful": "Re-authentication was successful.",
+      "unique_id_mismatch": "Those credentials are for a different Digi account. Sign in with the account this entry was set up for, or add the other account as a separate integration entry.",
       "cannot_connect": "Logged in, but could not load your invoices."
     }
   },

@@ -261,10 +261,15 @@ class DigiConfigFlow(ConfigFlow, domain=DOMAIN):
             CONF_ADDRESS_LABEL: address_label,
         }
 
+        await self.async_set_unique_id(self._email.lower())
+
         if self._reauth_entry is not None:
+            # A re-auth must land on the same Digi account. Without this the
+            # entry keeps its old title and unique id while the entities start
+            # reporting a different account's invoices.
+            self._abort_if_unique_id_mismatch()
             return self.async_update_reload_and_abort(self._reauth_entry, data_updates=data)
 
-        await self.async_set_unique_id(self._email.lower())
         self._abort_if_unique_id_configured()
         return self.async_create_entry(title=self._email, data=data)
 

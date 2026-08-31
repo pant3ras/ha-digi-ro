@@ -1,6 +1,23 @@
 Digi Romania — Home Assistant integration
 Copyright (c) 2026 PanTeraS
 
+This integration adapts the login, two-factor authentication and invoice
+parsing logic from utilitati_romania by HAForgeLabs, used under the MIT
+License. The upstream copyright notices travel with it:
+
+    Copyright (c) 2026 Marius Onițiu
+    Copyright (c) 2024 Cristian Necrea
+    Copyright (c) 2026 Cristian Necrea
+
+    Portions of that work are themselves derived from Home Assistant custom
+    integrations originally authored by Cristian Necrea and published under
+    the MIT License.
+
+Upstream project: https://github.com/HAForgeLabs/utilitati_romania
+
+This integration and the adapted portions above are both distributed under
+the MIT License, reproduced below.
+
 MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
